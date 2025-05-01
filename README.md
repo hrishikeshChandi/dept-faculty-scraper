@@ -1,4 +1,4 @@
-```markdown
+
 # Dept Faculty Scraper
 
 The **Dept Faculty Scraper** is a Flask-based web application that retrieves and displays faculty names for various departments from a specified university website. It uses Selenium for web scraping and a JSON file for caching data locally.
