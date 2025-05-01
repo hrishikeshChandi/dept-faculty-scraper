@@ -1,22 +1,21 @@
-
 # Dept Faculty Scraper
 
-The **Dept Faculty Scraper** is a Flask-based web application that retrieves and displays faculty names for various departments from a specified university website. It uses Selenium for web scraping and a JSON file for caching data locally.
+The **Dept Faculty Scraper** is a Flask-based web app that shows faculty names for different departments. It uses Selenium to get the data and stores it in a JSON file for faster access later.
 
 ## Features
 
-- User-friendly web interface for selecting a department.
-- Retrieves faculty names dynamically using Selenium.
-- Caches faculty names in a local `data.json` file for faster subsequent searches.
-- Automatically updates the cache when new data is available.
+- Simple web interface to search by department.
+- Uses Selenium to get faculty names from the university site.
+- Saves results in a local `data.json` file for faster future searches.
+- Updates the saved data when new info is found.
 
 ## Prerequisites
 
-Before running the application, ensure that the following are installed:
+Before running the app, make sure you have:
 
-1. Python 3.7+
+1. Python 3.7 or higher
 2. Google Chrome browser
-3. Chrome WebDriver (managed automatically using `webdriver-manager`)
+3. Chrome WebDriver (automatically managed by `webdriver-manager`)
 
 ## Installation
 
@@ -27,41 +26,39 @@ Before running the application, ensure that the following are installed:
    ```
 
 2. **Install Dependencies**:
-   Install the required Python libraries using:
    ```bash
    pip install -r requirements.txt
    ```
 
 3. **Set Up ChromeDriver**:
-   The application automatically manages ChromeDriver using `webdriver-manager`. Ensure you have Google Chrome installed.
+   Just make sure Google Chrome is installed. `webdriver-manager` will handle the rest.
 
 ## Usage
 
 1. **Run the Application**:
-   Start the Flask server by running:
    ```bash
    python app.py
    ```
 
 2. **Access the Application**:
-   Open a web browser and navigate to:
+   Open your browser and go to:
    ```
    http://127.0.0.1:8000
    ```
 
 3. **Search for Faculty**:
-   - Enter the department name (e.g., `cse`, `ise`, `ece`, etc.) in the input field.
-   - The application will fetch and display the faculty names for the selected department.
+   - Type the department name (like `cse`, `ise`, `ece`, etc.) in the input box.
+   - The app will show the faculty names for that department.
 
 ## File Structure
 
-- **app.py**: The main Flask application.
-- **templates/index.html**: The HTML template for the web interface.
-- **data.json**: A local cache file for storing faculty names.
+- **app.py**: The main Flask app.
+- **templates/index.html**: The web page layout.
+- **data.json**: Stores faculty names locally.
 
 ## Supported Departments
 
-The application supports the following departments:
+The app supports these departments:
 
 - Aerospace
 - Architecture
@@ -91,32 +88,27 @@ The application supports the following departments:
 ## How It Works
 
 1. **User Input**:
-   - Users input the department name.
+   - You enter the department name.
 
 2. **Search Process**:
-   - The application first checks the `data.json` file for cached data.
-   - If the department data is not found or outdated, it uses Selenium to scrape the faculty names from the university website.
+   - The app checks the `data.json` file first.
+   - If data is missing or old, it uses Selenium to scrape the site.
 
 3. **Cache Update**:
-   - Scraped data is stored in `data.json` for future use.
+   - New data is saved in `data.json` for next time.
 
 ## Technologies Used
 
-- **Flask**: Backend framework for the web application.
-- **Selenium**: Web scraping tool for fetching faculty names dynamically.
-- **HTML/CSS**: Frontend interface.
-- **JSON**: Local caching mechanism.
+- **Flask**: Web app framework.
+- **Selenium**: Tool for web scraping.
+- **HTML/CSS**: For the frontend.
+- **JSON**: For saving data locally.
 
 ## Limitations
 
-- The application relies on the university website's structure. Changes to the website may break the scraper.
-- Requires a stable internet connection for scraping.
+- If the university website changes, the scraper might stop working.
+- Needs an internet connection to fetch data.
 
 ## License
 
 This project is licensed under the MIT License.
-
----
-
-Feel free to contribute or raise issues if you encounter any problems!
-```
