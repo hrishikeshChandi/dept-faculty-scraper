@@ -31,7 +31,7 @@ Before running the app, make sure you have:
    ```
 
 3. **Set Up ChromeDriver**:
-   Just make sure Google Chrome is installed. `webdriver-manager` will handle the rest.
+   Make sure Google Chrome is installed. 
 
 ## Usage
 
