@@ -37,7 +37,7 @@ Before running the app, make sure you have:
 
 1. **Run the Application**:
    ```bash
-   python app.py
+   python main.py
    ```
 
 2. **Access the Application**:
@@ -52,7 +52,7 @@ Before running the app, make sure you have:
 
 ## File Structure
 
-- **app.py**: The main Flask app.
+- **main.py**: The main Flask app.
 - **templates/index.html**: The web page layout.
 - **data.json**: Stores faculty names locally.
 
